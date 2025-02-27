@@ -100,7 +100,6 @@ app.MapPut("/Musicas", ([FromServices] DAL<Musica> dal, [FromBody]Musica musica)
         return Results.NotFound();
     }
 
-    musicaAAlterar.Artista = musica.Artista;
     musicaAAlterar.AnoLancamento = musica.AnoLancamento;
     musicaAAlterar.Nome = musica.Nome;
 
