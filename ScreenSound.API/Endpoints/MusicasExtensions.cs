@@ -42,16 +42,16 @@ namespace ScreenSound.API.Endpoints
                 return Results.Ok();
             });
 
-            app.MapPut("/Musicas", ([FromServices] DAL<Musica> dal, [FromBody] Musica musica) =>
+            app.MapPut("/Musicas", ([FromServices] DAL<Musica> dal, [FromBody] MusicaRequestEdit musicaRequest) =>
             {
-                var musicaAAlterar = dal.RecuperarPor(a => a.Id == musica.Id);
+                var musicaAAlterar = dal.RecuperarPor(a => a.Id == musicaRequest.Id);
                 if (musicaAAlterar is null)
                 {
                     return Results.NotFound();
                 }
 
-                musicaAAlterar.AnoLancamento = musica.AnoLancamento;
-                musicaAAlterar.Nome = musica.Nome;
+                musicaAAlterar.AnoLancamento = musicaRequest.anoLancamento;
+                musicaAAlterar.Nome = musicaRequest.nome;
 
                 dal.Atualizar(musicaAAlterar);
                 return Results.Ok();
