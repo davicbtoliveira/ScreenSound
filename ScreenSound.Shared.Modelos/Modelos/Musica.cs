@@ -1,4 +1,6 @@
-﻿namespace ScreenSound.Modelos;
+﻿using System.IO.Pipes;
+
+namespace ScreenSound.Modelos;
 
 public class Musica
 {
