@@ -1,4 +1,5 @@
-﻿using System.IO.Pipes;
+﻿using ScreenSound.Shared.Modelos.Modelos;
+using System.IO.Pipes;
 
 namespace ScreenSound.Modelos;
 
@@ -14,10 +15,12 @@ public class Musica
     public int? AnoLancamento { get; set; }
     public virtual Artista? Artista { get; set; }
 
+    public virtual ICollection<Genero> Generos { get; set; }
+
     public void ExibirFichaTecnica()
     {
         Console.WriteLine($"Nome: {Nome}");
-      
+    
     }
 
     public override string ToString()
