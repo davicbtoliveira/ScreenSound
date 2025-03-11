@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenSound.Shared.Modelos"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenSound.Shared.Dados", "ScreenSound.Shared.Dados\ScreenSound.Shared.Dados.csproj", "{0552ABE2-F562-4351-A4D8-74F3EBA92C5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenSound.Web", "ScreenSound.Web\ScreenSound.Web.csproj", "{BFA0CD05-4FC2-404B-A9ED-28EEE4435590}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0552ABE2-F562-4351-A4D8-74F3EBA92C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0552ABE2-F562-4351-A4D8-74F3EBA92C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0552ABE2-F562-4351-A4D8-74F3EBA92C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA0CD05-4FC2-404B-A9ED-28EEE4435590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA0CD05-4FC2-404B-A9ED-28EEE4435590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA0CD05-4FC2-404B-A9ED-28EEE4435590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA0CD05-4FC2-404B-A9ED-28EEE4435590}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

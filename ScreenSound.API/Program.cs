@@ -3,10 +3,15 @@ using ScreenSound.Banco;
 using ScreenSound.Modelos;
 using ScreenSound.Shared.Modelos.Modelos;
 using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ScreenSoundContext>();
+builder.Services.AddDbContext<ScreenSoundContext>((options) =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ScreenSoundDB"));
+});
 builder.Services.AddTransient<DAL<Artista>>();
 builder.Services.AddTransient<DAL<Musica>>();
 builder.Services.AddTransient<DAL<Genero>>();
