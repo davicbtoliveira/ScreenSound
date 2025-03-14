@@ -1,14 +1,18 @@
 @page "/Artistas"
 @using ScreenSound.Web.Response
 @using ScreenSound.Web.Services
-@inject ArtistaAPI artistaAPI
+@inject ArtistaAPI artistasAPI
 <h3>Artistas</h3>
 @if(artistas is not null)
 {
-    foreach (var artista in artistas)
-    {
-        <p>@artista.Nome</p>
-    }
+    <MudGrid>
+        @foreach (var artista in artistas)
+        {
+            <MudItem xs="3">
+                <CardArtista Artista="artista"/>
+            </MudItem>
+        }
+    </MudGrid>
 }
 
 
@@ -17,14 +21,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        try
-        {
-            artistas = await artistaAPI.GetArtistasAsync();
-        }
-        catch (Exception ex)
-        {
-            // Log the exception (use a logging framework or simply output to console for now)
-            Console.WriteLine($"An error occurred: {ex.Message}");
-        }
+            artistas = await artistasAPI.GetArtistasAsync();
     }
 }
